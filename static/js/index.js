@@ -36,7 +36,6 @@ function getContents() {
                 let time_before = time2str(time_post);
                 let id = content["_id"];
                 let like = contents[i]
-                // let edit = contents[i]
 
                 let class_heart = content['heart_by_me'] ? "fas" : "far"
                 let count_heart = content["count_heart"]
@@ -51,6 +50,7 @@ function getContents() {
                         </div>
                         <div class="Box">${comment}</div>
                         <div class="lastPlz">
+                                <button type="button" onclick="edit('${id}')">수정</button>
                                 <button type="button" onclick="delete_content('${id}')">삭제</button>
                             </div>
                         <div class="Like">
@@ -107,22 +107,19 @@ function like(like_id) {
     }
 }
 
- // function edit() {
- //     location.href = '/update',
- //
- //         function update(edit_id) {
- //             $.ajax({
- //                 type: "POST",
- //                 url: "/update",
- //                 data: {
- //                     _id_give: edit_id
- //                 },
- //                 success: function (response) {
- //                     console.log('안녕')
- //                 }
- //             })
- //         }
- // }
+function edit(id) {
+    $.ajax({
+        type: "POST",
+        url: "/a",
+        data: {
+            _id_give: id
+        },
+        success: function (response) {
+            location.href='/update'
+        }
+
+    })
+}
 
 
 

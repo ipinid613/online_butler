@@ -189,14 +189,19 @@ def like():
         return redirect('/home')
 
 
+_id = ''
+@app.route('/a', methods=['GET','POST'])
+def a():
+    global _id
+    _id = request.form['_id_give']
+    _id = ObjectId(_id)
+    return redirect(url_for('update'))
+
 @app.route('/update', methods=['GET', 'POST'])
 def update():
     form = UpdatingForm()
     allowedExtensions = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
-    _id = request.form['_id_give']
-    _id = ObjectId(_id)
     target = db.contents.find_one({'_id': _id})
-    id = target['_id']
     subject = target['subject']
     content = target['content']
     del_path = target['imgPath'][1:]
@@ -206,25 +211,22 @@ def update():
             filename = form.img.data.filename
             if '.' in filename and \
                     filename.rsplit('.', 1)[1].lower() in allowedExtensions:
-
                 db.contents.update_one(
                     {'_id': _id},
                     {'$set': {'subject': form.subject.data}}
                 )
-
                 db.contents.update_one(
                     {'_id': _id},
                     {'$set': {'content': form.content.data}}
                 )
-
                 db.contents.update_one(
                     {'_id': _id},
                     {'$set': {'imgPath': f'/static/img/{filename}'}}
                 )
-
                 form.img.data.save('./static/img/' + filename)
                 os.remove(del_path)
                 return redirect('/home')
+
         elif not form.img.data.filename:
             db.contents.update_one(
                 {'_id': _id},
@@ -235,7 +237,7 @@ def update():
                 {'$set': {'content': form.content.data}}
             )
             return redirect('/home')
-    return render_template('update.html', form=form, subject=subject, content=content, imgPath=imgPath, id=id)
+    return render_template('update.html', form=form, subject=subject, content=content, imgPath=imgPath)
 
 @app.route('/delete', methods=['POST','GET'])
 def delete():
