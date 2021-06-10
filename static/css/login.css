@@ -1,0 +1,131 @@
+* {
+    font-family: 'Gaegu', cursive;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+.loginWrap {
+    display: block;
+    width: 650px;
+    margin: auto;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.loginCat {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    margin-left: 90px;
+    top: 40px;
+}
+
+.loginBox {
+    height: 350px;
+    border: 1px solid #ffe4e4;
+    background-color: #ffe4e4;
+    box-shadow: 3px 2px 5px gray;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    width: 300px;
+    margin: 50px auto;
+}
+
+.inputBox input {
+    margin-top: 30px;
+    height: 35px;
+    font-family: 'Poor Story', cursive;
+}
+
+.inputBox input:focus {
+    outline: none;
+}
+
+.loginBtns {
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 300px;
+}
+
+.loginBtns button {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: white;
+    font-family: 'Poor Story', cursive;
+}
+
+.loginBtns button:hover {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.paw {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 60%;
+    left: 75%;
+}
+
+.paw2 {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    padding: 0px 0px 0px 40px;
+}
+
+.desc {
+    font-family: 'Poor Story', cursive;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+@media screen and (min-device-width: 1600px) {
+    h1 {
+        font-size: 65px;
+    }
+
+    .loginWrap {
+        padding-top: 130px;
+    }
+
+    .inputBox input::placeholder {
+        font-size: 16px;
+    }
+
+    .loginBtns button {
+        width: 110px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .loginCat {
+        top: 110px;
+    }
+
+    .paw {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: 60%;
+        left: 80%;
+    }
+}

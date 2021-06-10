@@ -1,0 +1,308 @@
+/*font-family: 'Gaegu', cursive;*/
+/*font-family: 'Poor Story', cursive;*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poor Story', cursive;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe4e4;
+    box-shadow: 0px 1px 6px gray;
+}
+
+.headerTitle {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Gaegu', cursive;
+}
+
+.box {
+    width: 15%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: end;
+    padding-right: 20px;
+}
+
+.logout,
+.write {
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.btn {
+    margin-right: 10px;
+}
+
+.contentsBox {
+    width: 70%;
+    height: 100%;
+    margin: 0px auto 10px auto;
+    gap: 10px;
+    border: 3px solid #121212;
+    border-radius: 5px;
+}
+
+.typePopular {
+    margin-right: 10px;
+}
+
+.contentsType {
+    width: 70%;
+    margin: 30px auto 5px auto;
+    grid-column: 1/4;
+    align-items: center;
+}
+
+.contentsType button {
+    width: 90px;
+    background-color: #ffe4e4;
+    color: black;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+}
+
+.type {
+    margin-left: 10px;
+    width: 70px;
+}
+
+.contents {
+    width: 98%;
+    height: 350px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+}
+
+.contents img {
+    width: 400px;
+    height: 350px;
+}
+
+.contents_ {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px;
+    width: 100%;
+    height: 400px;
+}
+
+.nameTime {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.time {
+    text-align: right;
+    margin-bottom: 5px;
+    width: 100%;
+
+}
+
+.Box {
+    background-color: #ffe4e4;
+    width: 100%;
+    height: 50%;
+    padding: 30px;
+}
+
+.Like {
+    width: 100%;
+    padding-left: 90%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.like {
+    font-size: 22px;
+    color: black;
+    width: 100%;
+    margin-left: 20%;
+    margin-bottom: 5%;
+}
+
+.Like button {
+    background-color: transparent;
+    border: none;
+    color: #e71515;
+    cursor: pointer;
+}
+
+.fullheart {
+    display: none;
+}
+
+.boxs {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.lastPlz {
+    position: absolute;
+    margin-top: 18%;
+    width: 30%;
+    height: 7;
+}
+
+.lastPlz button {
+    width: 12%;
+    margin-right: 2%;
+    border: none;
+    background-color: #ffe4e4;
+    border-radius: 5px;
+    padding: 1%;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    padding-bottom: 10px;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer_text {
+    width: 13%;
+    float: right;
+    text-align: right;
+    margin-right: 15px;
+    padding: 20px;
+    background-color: #ffe4e4;
+    line-height: 30px;
+}
+
+.contactCat {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    right: 2%;
+    bottom: 110px;
+}
+
+.goTop {
+    background-color: #ffe4e4;
+    width: 50px;
+    height: 50px;
+    padding: 3px 11px;
+    margin: 130px 0px 0px 20px;
+    position: absolute;
+    border: 1px solid black;
+}
+
+/*footer span {*/
+/*  font-size: 13px;*/
+/*}*/
+
+
+/* show contents */
+
+.showContainer {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.showheader {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px 20px 0px;
+}
+
+.delete {
+    width: 50px;
+    height: 30px;
+}
+
+.upload {
+    width: 400px;
+    height: 400px;
+    padding-bottom: 20px;
+}
+
+.showLike {
+    width: 100%;
+    height: 20px;
+    text-align: start;
+}
+
+.commentBox {
+    width: 100%;
+    height: 100%;
+}
+
+.comment {
+    padding-top: 20px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+@media screen and (min-device-width: 1600px) {
+    .contents {
+        height: 400px;
+    }
+
+    .contents img {
+        width: 500px;
+        height: 400px;
+    }
+
+    .lastPlz {
+        margin-top: 15%;;
+    }
+}

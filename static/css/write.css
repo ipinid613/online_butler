@@ -1,0 +1,64 @@
+
+.title {
+    font-family: 'Gaegu', cursive;
+    font-size: 60px;
+}
+
+.whole {
+    height: auto;
+}
+
+.form-group {
+    font-family: 'Poor Story', cursive;
+    font-size: 26px;
+}
+.holder {
+    font-family: 'Poor Story', cursive;
+    font-size: 16px;
+}
+.help {
+    font-family: 'Poor Story', cursive;
+    font-size: 16px;
+}
+
+.button {
+    margin: auto;
+    margin-top: 10px;
+    font-family: 'Poor Story', cursive;
+    font-size: 16px;
+}
+
+.submit_button {
+    font-family: 'Poor Story', cursive;
+    font-size: 16px;
+}
+
+.submit_button i {
+    width: 24px;
+    height: 24px;
+}
+
+.box {
+    background-color: #ffe4e4;
+    box-shadow: 3px 2px 7px gray;
+    border-radius: 0px;
+    max-width: 650px;
+    height: 400px;
+    margin: auto;
+    padding: 50px;
+}
+
+.section {
+    display: block;
+    padding-top: 30px;
+}
+
+.pets {
+    margin-top: 90px;
+}
+
+@media screen and (min-device-width: 1600px) {
+    .whole {
+        margin-top: 80px;
+    }
+}

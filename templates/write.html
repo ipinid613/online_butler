@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'/>
+    <meta name='viewport' content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!--CDN 링크 -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/css/write.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <title>랜선집사 | 자랑준비</title>
+</head>
+
+<body>
+<div class="whole">
+    <section class="hero is-white top">
+        <div class="hero-body has-text-centered" style="padding-bottom:1rem;margin:auto;">
+            <h1 class="title is-sparta">자랑준비</h1>
+        </div>
+    </section>
+    <div class="container">
+        <div class="box">
+            {# enctype="multipart/form-data" 지정안하면 img가 None이 됩니다#}
+            <form action="http://localhost:5000/contents" method="POST" enctype="multipart/form-data">
+                <div>
+                    <div class="form-group">
+                        {{ form.subject.label("제목") }}
+                        <p class="holder">{{ form.subject(class="form-control", placeholder="제목을 적어주세요!") }}</p>
+                    </div>
+                    <div class="form-group">
+                        {{ form.content.label("글") }}
+                        <p class="holder">{{ form.content(class="form-control", placeholder="글을 적어주세요!") }}</p>
+                    </div>
+                    <div class="submit_button">
+                        {{ form.hidden_tag() }}
+                        <label for="img">
+                            <i class="fas fa-camera"></i>
+                        </label>
+                        {{ form.img }}
+                    </div>
+
+                    <nav class="level is-mobile">
+                        <button class="level-item button is-rounded is-active" type="submit">
+                            자랑하기
+                        </button>
+                        <button class="level-item button is-rounded is-active" onclick="location.href='/home'">
+                            돌아가기
+                        </button>
+                    </nav>
+                </div>
+                <img src="../static/html_img/pet.jpeg" class="pets">
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
